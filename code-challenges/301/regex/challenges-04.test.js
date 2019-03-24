@@ -5,7 +5,7 @@ CHALLENGE 1
 
 Write a function named isNum that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
 
-For example: 
+For example:
 12345 returns true
 '12345' returns true
 'h3llo world' returns true
@@ -13,7 +13,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  return input.match(/[0-9]/)
+  let containsNum = /\d/;
+  return containsNum.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,7 +26,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let capitalWord = /[A-Z]\w*/g;
+  return str.match(capitalWord);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,7 +37,10 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let capitalsAtoJ = /^[A-J]\w*/g;
+  let newArray = [];
+  arr.forEach(city => city.match(capitalsAtoJ) ? newArray.push(city) : null)
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,7 +56,8 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+  let isOctober = /^[Oo]ct(ober)?$/;
+  return isOctober.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,7 +71,9 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
+  let wordWithSpace = /[a-zA-z]\w*\s/g;
+  return str.match(wordWithSpace);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,7 +81,7 @@ CHALLENGE 6
 
 You want to teach a friend how to play hangman and want to show them using a partially complete puzzle.
 
-Write a function named hangman which uses the replace method to remove all of the vowels (a, e, i, o, u) from the hangman string and replace them with an underscore. 
+Write a function named hangman which uses the replace method to remove all of the vowels (a, e, i, o, u) from the hangman string and replace them with an underscore.
 
 The function should return a string containing the consonants in their original positions and underscores where the vowels were previously located.
 
@@ -81,7 +89,8 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  // Solution code here...
+  let vowels = /(a|e|i|o|u)/g;
+  return str.replace(vowels, '_');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -97,7 +106,8 @@ Hint: All of these words end with the letters "ells".
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
 const findShells = (str) => {
-  // Solution code here...
+  let endsIn = /\w*(ells)/g;
+  return str.match(endsIn);
 };
 
 /* ------------------------------------------------------------------------------------------------
