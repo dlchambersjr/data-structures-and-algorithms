@@ -1,20 +1,16 @@
 {
-  "name": "data-structures-and-algorithms",
+  "name": "3-code-challenges",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dlchambersjr/data-structures-and-algorithms.git"
+    "test": "jest --coverage --verbose",
+    "watch": "jest --watchall"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dlchambersjr/data-structures-and-algorithms/issues"
-  },
-  "homepage": "https://github.com/dlchambersjr/data-structures-and-algorithms#readme"
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.1.0"
+  }
 }
