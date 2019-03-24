@@ -9,12 +9,12 @@ Then, write a function named speaker that takes in a string and a callback funct
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  return word.toUpperCase();
-}
+  // Solution code here...
+};
 
 const speaker = (message, callback) => {
-  return callback(message);
-}
+  // Solution code here...
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -33,77 +33,62 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  arr.push(value);
-}
+  // Solution code here...
+};
 
 const addNumbers = (num, arr, times, callback) => {
-  for (let i = 0; i < times; i++) {
-    callback(arr, num);
-  }
-  return arr;
-}
+  // Solution code here...
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
- 
+
 Write a function named removeOne that takes in a number and an array. If the number divided by three has a remainder of two, pop one element off of the array.
- 
+
 Hint: you may want to look into the modulo operation.
- 
+
 Then, write a function named removeElements that takes in an array and a callback. This function should use a for loop to iterate over the array and invoke the callback once for each element in the array.
- 
+
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
-  if (num % 3 === 2) {
-    arr.pop();
-  }
-}
+  // Solution code here...
+};
 
 const removeElements = (arr, callback) => {
-  for (let i = 0; i < arr.length; i++) {
-    callback(arr[i], arr);
-  }
-  return arr;
-
-}
+  // Solution code here...
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
- 
+
 Write a function named removeWithForEach that produces the same output as challenge 3, but uses forEach.
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  arr.forEach(num => callback(num, arr));
-  return arr;
-}
+  // Solution code here...
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
- 
+
 Write a function named removeWithAnon that produces the same output as challenges 3 and 4.
- 
+
 This function should use forEach again, but rather than taking in a callback as an argument, define an anonymous function as the argument to forEach.
- 
+
 This anonymous function should accept up to three arguments: the element, the index, and the array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  arr.forEach((num, idx, arr) => {
-    if (num % 3 === 2) {
-      arr.pop();
-    }
-  })
-  return arr
-}
+  // Solution code here...
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
- 
+
 Write a function named createList that takes in an array of the current store intentory.
- 
+
 The inventory is formatted like this:
 [
   { name: 'apples', available: true },
@@ -112,58 +97,41 @@ The inventory is formatted like this:
   { name: 'bananas', available: true },
   { name: 'blueberries', available: false }
 ]
- 
+
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  let groceryList = [];
-  availableItems.forEach(item => {
-    if (item.available) {
-      groceryList.push(item.name);
-    }
-  })
-  return groceryList;
-
-}
+  // Solution code here...
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
- 
+
 Write a function named fizzbuzz that takes in an array of numbers.
- 
+
 Iterate over the array using forEach to determine the output based on several rules:
   - If a number is divisible by 3, add the word "Fizz" to the output array.
   - If the number is divisible by 5, add the word "Buzz" to the output array.
   - If the number is divisible by both 3 and 5, add the phrase "Fizz Buzz" to the output array.
   - Otherwise, add the number to the output array.
- 
+
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  let output = [];
-  arr.forEach(num => {
-    if (num % 15 === 0) {
-      output.push('Fizz Buzz');
-    } else if (num % 5 === 0) {
-      output.push('Buzz');
-    } else if (num % 3 === 0) {
-      output.push('Fizz');
-    } else output.push(num);
-  })
-  return output;
-}
+  // Solution code here...
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
- 
+
 All the code below will verify that your functions are working to solve the challenges.
- 
+
 DO NOT CHANGE any of the below code.
- 
+
 Run your tests from the console: jest challenges-01.test.js
- 
+
 ------------------------------------------------------------------------------------------------ */
 
 describe('Testing challenge 1', () => {
